@@ -1,0 +1,84 @@
+.hero {
+  padding: 5rem 0rem 5rem;
+  position: relative;
+}
+
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+.hero-title em {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  color: #888;
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+}
+
+.hero-cta {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-cta button {
+  padding: 0.6em 1.2em;
+  font-size: 1.6rem;
+}
+
+.hero-media {
+  width: 100%;
+  min-width: 0;
+}
+.media-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 2px dashed color-mix(in oklab, canvasText, transparent 70%);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: color-mix(in oklab, canvasText, transparent 30%);
+  font-size: 0.95rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-media {
+    order: 2;
+  }
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -6%;
+  top: 8%;
+  width: min(520px, 48%);
+  height: 70%;
+  background: radial-gradient(closest-side, color-mix(in oklab, canvasText, transparent 90%), transparent 60%);
+  filter: blur(22px);
+  z-index: -1;
+  pointer-events: none;
+}

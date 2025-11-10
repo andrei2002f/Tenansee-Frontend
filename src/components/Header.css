@@ -1,0 +1,76 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: color-mix(in oklab, canvas, canvasText 4%);
+  border-bottom: 1px solid color-mix(in oklab, canvasText, transparent 85%);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+}
+.brand-mark {
+  font-size: 1.25rem;
+}
+.brand-text {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.main-nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  color: inherit;
+  opacity: 0.9;
+}
+.nav-list a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.auth-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-btn {
+  line-height: 1;
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+  .nav-list {
+    gap: 0.75rem;
+  }
+  .brand-text {
+    display: none;
+  }
+}
