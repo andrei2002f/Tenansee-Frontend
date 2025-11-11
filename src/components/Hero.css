@@ -33,14 +33,66 @@
 }
 
 .hero-cta {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   display: flex;
   justify-content: center;
 }
 
-.hero-cta button {
+.hero-cta .email-form {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 640px;
+}
+
+.hero-cta .email-form input[type='email'] {
+  flex: 1 1 220px;
+  padding: 0.65em 0.9em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.hero-cta .email-form input[type='email']:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.hero-cta .email-form button {
   padding: 0.6em 1.2em;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-feedback {
+  margin-top: 0.75rem;
+  min-height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+.success-msg {
+  color: #047857;
+  font-weight: 500;
+}
+.error-msg {
+  color: #dc2626;
+  font-weight: 500;
+}
+.consent-note {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #666;
 }
 
 .hero-media {
@@ -67,6 +119,13 @@
   }
   .hero-media {
     order: 2;
+  }
+  .hero-cta .email-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-cta .email-form button {
+    width: 100%;
   }
 }
 
